@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css"; // 전역 스타일 시트
 import { Toaster } from "@/components/ui/toaster";
+import { Navigation } from "@/components/ui/navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className={`${inter.className} antialiased`}>
+        <Navigation />
         {children}
         <Toaster />
       </body>
